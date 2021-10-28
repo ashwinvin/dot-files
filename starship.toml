@@ -1,0 +1,38 @@
+format = '''$username$hostname$directory
+$character'''
+add_newline = true
+right_format = '$status $time $battery'
+
+[battery]
+format = '[$symbol]($style)'
+
+[[battery.display]]
+threshold = 90
+style = 'bold green'
+
+[[battery.display]]
+threshold = 70
+style = 'bold yellow'
+
+[[battery.display]]
+threshold = 20
+style = 'bold red'
+
+[username]
+format = '\[[$user]($style)\] in '
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '\[[$hostname]($style)\] at '
+
+[status]
+disabled = false 
+format = '[$symbol]($style)'
+
+[time]
+format = '[$time]($style)'
+disabled = false
+
+[line_break]
+disabled = false
